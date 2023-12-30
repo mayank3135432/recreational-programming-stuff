@@ -1,0 +1,4 @@
+c.real=q1.real*q2.real-q1.ith*q2.ith-q1.jth*q2.jth-q1.kth*q2.kth
+c.ith=q1.real*q2.ith+q2.real*q1.ith+q1.jth*q2.kth-q2.jth*q1.kth
+c.jth=q1.real*q2.jth-q1.ith*q2.kth+q2.real*q1.jth+q2.ith*q1.kth
+c.kth=q1.real*q2.kth+q1.ith*q2.jth-q2.ith*q1.jth+q2.real*q1.kth
