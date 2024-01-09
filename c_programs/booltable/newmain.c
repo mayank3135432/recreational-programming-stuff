@@ -191,6 +191,7 @@ char invhashmap(int n){
     else if(n>=21&&n<=24) return(n+98);
     else if(n>=25&&n<=45) return(n+40);
     else if(n>=46&&n<=49) return(n+41);
+  else return 0;
 }
 
 int evaluate(int* values){

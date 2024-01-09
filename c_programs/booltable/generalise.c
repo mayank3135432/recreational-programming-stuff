@@ -74,6 +74,7 @@ int load=-1; // treat postfix kind of like a stack
     printstack();
     printf("\n\n");
 } */
+
 int isoperator(char x){ // checks whether given char is an operator or not
     return((x=='=' || x=='>' || x=='v' || x=='&' || x=='V' || x=='^'));
 }
@@ -109,13 +110,26 @@ void push(char x){ // push char on to stack
         push(x); // recursivly try again
     }
 }
+
+
+int hashtable[HASHTABLESIZE]={0};
+int hashmap(char x){
+    return x-97;
+}
+char invhashmap(int n){
+    return n+97;
+}
+
 int inttopos(){
     int i;
     int numberofvariables=0;
     for(i=0;infix[i];i++){
         if(isletter(infix[i])){ // if element is a letter, push it onto postfix
             keep(infix[i]);
-            numberofvariables++;
+            if(!hashtable[hashmap(infix[i])]){ //if var not already counted
+                numberofvariables++;//icrement number of variables
+                hashtable[hashmap(infix[i])]=1;//mark variable as counted
+            }
         }
         else if(isoperator(infix[i])||isunaryoperator(infix[i])){ // if element is a operator, push it onto stack
             push(infix[i]); 
@@ -138,15 +152,6 @@ int inttopos(){
     keep(0); // append NULL character to postfix[] string 
     return(numberofvariables);
 }
-
-int hashtable[HASHTABLESIZE]={0};
-int hashmap(char x){
-    return x-97;
-}
-char invhashmap(int n){
-    return n+97;
-}
-
 int evaluate(int* values){
     int* evalstack=(int*)malloc(MAX*sizeof(int));
     int evaltop=-1;
