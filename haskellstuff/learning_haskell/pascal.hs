@@ -1,7 +1,7 @@
 upsum :: [Int] -> [Int]
 upsum [x] = [x]
 upsum [] = []
-upsum (a:b:as) = (a+b):(upsum (b:as))
+upsum (a:b:as) = (a+b):upsum (b:as)
 
 pascal :: Int -> [Int]
 pascal 0 = [1]
