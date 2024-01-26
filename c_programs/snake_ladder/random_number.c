@@ -1,3 +1,5 @@
+// Program to test srand() and rand() functions
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
