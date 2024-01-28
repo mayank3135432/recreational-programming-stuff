@@ -14,7 +14,10 @@ double* solve(double** M,int rows,int cols){
   double tempp,tempk,tempr;
   while(piv<rows){
     tempp = M[piv][piv];
-    for(int k=0;k<cols;k++) M[piv][k] /= tempp;
+    for(int k=0;k<cols;k++){
+      M[piv][k] /= tempp;
+      if(M[piv][k] != M[piv][k]) return NULL;
+    }
     for(int k=piv+1;k<rows;k++){
       tempk=M[k][piv];
       for(int i=piv;i<cols;i++) M[k][i] -= tempk*M[piv][i];
@@ -40,11 +43,12 @@ int main(){
   for(int i=0;i<3;i++) matrix[i] = (double*)malloc(4*sizeof(double));
   matrix[0][0]=1;matrix[0][1]=1;matrix[0][2]=-1;matrix[0][3]=-2;
   matrix[1][0]=2;matrix[1][1]=-1;matrix[1][2]=1;matrix[1][3]=5;
-  matrix[2][0]=-1;matrix[2][1]=2;matrix[2][2]=2;matrix[2][3]=1;
+  matrix[2][0]=1;matrix[2][1]=1;matrix[2][2]=-1;matrix[2][3]=-2;
   display(matrix,3,4);
   double* v=solve(matrix,3,4);
   if(v==NULL){
-    printf("No or infinetly many solutions\n");
+    printf("no / infinitely many solutions\n");
+    return 0;
   }
   display(matrix,3,4);
   for(int i=0;i<3;i++){

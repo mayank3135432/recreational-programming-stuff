@@ -1,0 +1,6 @@
+myModule.c
+setup.py
+PackageName.egg-info/PKG-INFO
+PackageName.egg-info/SOURCES.txt
+PackageName.egg-info/dependency_links.txt
+PackageName.egg-info/top_level.txt
