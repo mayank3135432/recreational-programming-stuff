@@ -1,9 +1,0 @@
-chroma(G)
-    let n:=number of vertices of G
-    u=0;colour[u]=1
-    for(u=1;u<n;u++)
-        color[u]=1
-        for(i=0;i<n;i++)
-            if(G[u][i] && color[i]!=0 && color[i]==color[u])
-                color[u]=color[u]+1
-                i=0
