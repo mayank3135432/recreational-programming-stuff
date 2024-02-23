@@ -1,0 +1,128 @@
+By YouTube user @patrickstival6179
+
+Here are some classic dynamic programming problems:
+
+part I:
+
+Fibonacci Numbers:
+Problem: Compute the nth Fibonacci number.
+Dynamic Programming Approach: Use memoization or bottom-up tabulation to store and reuse previously computed Fibonacci numbers.
+
+Longest Common Subsequence (LCS):
+Problem: Given two sequences, find the length of the longest subsequence present in both of them.
+Dynamic Programming Approach: Build a table to store the lengths of LCS for different subproblems.
+
+Longest Increasing Subsequence (LIS):
+Problem: Given an unsorted array of integers, find the length of the longest increasing subsequence.
+Dynamic Programming Approach: Build a table to store the lengths of LIS for different subproblems.
+
+Knapsack Problem:
+Problem: Given a set of items, each with a weight and a value, determine the maximum value that can be obtained by selecting a subset of items with a total weight not exceeding a given limit.
+Dynamic Programming Approach: Create a table to store the maximum value for different subproblems.
+
+Coin Change Problem:
+Problem: Given a set of coin denominations and a total amount, find the number of ways to make the amount using any combination of coins.
+Dynamic Programming Approach: Build a table to store the number of ways to make change for different subproblems.
+
+Edit Distance:
+Problem: Given two strings, find the minimum number of operations (insertion, deletion, and substitution) required to convert one string into another.
+Dynamic Programming Approach: Build a table to store the minimum edit distance for different subproblems.
+
+Matrix Chain Multiplication:
+Problem: Given a sequence of matrices, find the most efficient way to multiply them.
+Dynamic Programming Approach: Build a table to store the minimum number of scalar multiplications needed for different subproblems.
+
+Subset Sum:
+Problem: Given a set of non-negative integers, determine if there is a subset that sums to a given target.
+Dynamic Programming Approach: Build a table to store whether a subset sum is possible for different subproblems.
+
+Rod Cutting Problem:
+Problem: Given a rod of length n and a table of prices for rod pieces of various lengths, find the maximum value obtainable by cutting the rod and selling the pieces.
+Dynamic Programming Approach: Build a table to store the maximum value for different subproblems.
+
+Maximum Subarray Sum:
+Problem: Given an array of integers, find the contiguous subarray with the largest sum.
+Dynamic Programming Approach: Keep track of the maximum subarray sum ending at each position in the array.
+
+
+
+part II:
+
+Palindrome Partitioning:
+Problem: Given a string, partition it into as many palindromic substrings as possible.
+Dynamic Programming Approach: Build a table to store the minimum number of cuts needed to partition substrings into palindromes.
+
+Word Break Problem:
+Problem: Given a string and a dictionary of words, determine if the string can be segmented into a space-separated sequence of dictionary words.
+Dynamic Programming Approach: Build a table to store whether a substring can be segmented using the given dictionary.
+
+Longest Palindromic Substring:
+Problem: Given a string, find the longest palindromic substring.
+Dynamic Programming Approach: Build a table to store whether substrings are palindromic.
+
+Count Distinct Subsequences:
+Problem: Given a string, count the number of distinct subsequences of it.
+Dynamic Programming Approach: Build a table to store the count of distinct subsequences for different subproblems.
+
+Maximum Sum Increasing Subsequence:
+Problem: Given an array of integers, find the maximum sum of increasing subsequence.
+Dynamic Programming Approach: Build a table to store the maximum sum of increasing subsequences for different subproblems.
+
+Largest Sum Rectangle in a 2D Matrix:
+Problem: Given a 2D matrix of integers, find the largest sum rectangle.
+Dynamic Programming Approach: Reduce the problem to finding the largest sum subarray in each column.
+
+Egg Dropping Problem:
+Problem: You are given k eggs and a building with n floors. Find the minimum number of drops needed to determine the critical floor from which eggs start to break.
+Dynamic Programming Approach: Build a table to store the minimum number of drops for different subproblems.
+
+Counting Paths in a Grid:
+Problem: Given a grid, find the number of unique paths from the top-left corner to the bottom-right corner.
+Dynamic Programming Approach: Build a table to store the number of paths for different positions in the grid.
+
+Wildcard Pattern Matching:
+Problem: Given a text and a wildcard pattern, implement wildcard pattern matching with '*' and '?'.
+Dynamic Programming Approach: Build a table to store whether substrings match for different subproblems.
+
+Minimum Cost Path in a Matrix:
+Problem: Given a 2D matrix with non-negative integers, find the minimum cost path from the top-left corner to the bottom-right corner.
+Dynamic Programming Approach: Build a table to store the minimum cost for different subproblems.
+
+
+part III:
+
+Distinct Paths in a Grid:
+Problem: Given a grid of m x n, find the number of unique paths from the top-left corner to the bottom-right corner, where movement is allowed only down or to the right.
+Dynamic Programming Approach: Build a table to store the number of unique paths for different positions in the grid.
+
+Count Palindromic Subsequences:
+Problem: Given a string, count the number of palindromic subsequences.
+Dynamic Programming Approach: Build a table to store the count of palindromic subsequences for different subproblems.
+
+Maximum Length Chain of Pairs:
+Problem: Given pairs of integers, find the length of the longest chain of pairs such that the second element of the pair is greater than the first element.
+Dynamic Programming Approach: Sort the pairs and apply a dynamic programming approach to find the longest chain.
+
+Longest Bitonic Subsequence:
+Problem: Given an array of integers, find the length of the longest bitonic subsequence. A bitonic subsequence is one that first increases and then decreases.
+Dynamic Programming Approach: Build tables to store the length of increasing and decreasing subsequences for different subproblems.
+
+Partition Equal Subset Sum:
+Problem: Given an array of positive integers, determine if it can be partitioned into two subsets with equal sum.
+Dynamic Programming Approach: Build a table to store whether a subset with a particular sum is possible.
+
+Maximum Product Subarray:
+Problem: Given an array of integers, find the contiguous subarray with the largest product.
+Dynamic Programming Approach: Keep track of both the maximum and minimum product subarrays at each position.
+
+Decode Ways:
+Problem: A message containing letters from A-Z can be encoded into numbers. Given a string, determine the number of ways it can be decoded.
+Dynamic Programming Approach: Build a table to store the number of ways to decode substrings for different subproblems.
+
+Shortest Common Supersequence:
+Problem: Given two strings, find the shortest string that has both strings as subsequences.
+Dynamic Programming Approach: Build a table to store the length of the shortest common supersequence for different subproblems.
+
+Maximum Profit in Stock Market:
+Problem: Given an array representing stock prices on different days, find the maximum profit that can be obtained by buying and selling stocks.
+Dynamic Programming Approach: Keep track of the minimum stock price and maximum profit at each position.
