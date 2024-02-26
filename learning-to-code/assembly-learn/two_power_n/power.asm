@@ -4,7 +4,7 @@ global .start
 section .text
 _start:
   mov ebx, 1
-  mov ecx, 6
+  mov ecx, 7
 label:
   add ebx, ebx
   dec ecx
