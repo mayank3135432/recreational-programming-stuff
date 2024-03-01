@@ -1,6 +1,5 @@
 R1 column x
 R2 column y
-R1
 
 coladd:
         push    rbp
