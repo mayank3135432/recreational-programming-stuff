@@ -1,4 +1,4 @@
-#include<gtk/gtk.h>
+#include</usr/include/gtk-4.0/gtk/gtk.h>
 static void print_hello(GtkWidget* widget,gpointer data){
 	g_print("hi world how are you\n");
 }

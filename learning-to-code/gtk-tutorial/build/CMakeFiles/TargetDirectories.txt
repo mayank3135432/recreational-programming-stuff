@@ -1,0 +1,3 @@
+/home/ateium/recreational-programming-stuff/learning-to-code/gtk-tutorial/build/CMakeFiles/example.out.dir
+/home/ateium/recreational-programming-stuff/learning-to-code/gtk-tutorial/build/CMakeFiles/edit_cache.dir
+/home/ateium/recreational-programming-stuff/learning-to-code/gtk-tutorial/build/CMakeFiles/rebuild_cache.dir

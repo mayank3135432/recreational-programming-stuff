@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/ateium/recreational-programming-stuff/learning-to-code/gtk-tutorial/build",
+  "command": "/usr/bin/cc    -o CMakeFiles/example.out.dir/main.c.o -c /home/ateium/recreational-programming-stuff/learning-to-code/gtk-tutorial/main.c",
+  "file": "/home/ateium/recreational-programming-stuff/learning-to-code/gtk-tutorial/main.c",
+  "output": "CMakeFiles/example.out.dir/main.c.o"
+}
+]

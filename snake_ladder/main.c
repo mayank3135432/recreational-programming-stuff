@@ -34,7 +34,7 @@ int genrand(){
 }
 int main(){
   srand(time(NULL));
-  int i;
+  int i, roll=0;
   short num_players;
   printf("Select Number of Players ");
   scanf("%hi",&num_players);
@@ -42,13 +42,17 @@ int main(){
   for(i=0;i<num_players;i++) X[i]=1;
   i=0;
   while(1){
+    fflush(stdin);
     printf("{");
     for(int k=0;k<num_players;k++){
       printf("%d,",*(X+k));
     }
     printf("\b}\n");
-    printf("chance of %d\n",i+1);
-    *(X+i) += genrand();
+    printf("chance of %d\nPRESS ENTER TO ROLL DICE",i+1);
+    getchar();
+    roll = genrand();
+    printf("%d rolled number %d\n",i+1,roll);
+    *(X+i) += roll;
     if(depr(X+i)!=NULL){
       printf("PLAYER %d WINS",i+1);
       return 0;
