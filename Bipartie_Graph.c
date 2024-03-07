@@ -4,7 +4,7 @@ https://leetcode.com/problems/is-graph-bipartite/
 */
 #include<stdboool.h>
 
-// idea: a graph is bipartite if and only if it has no cycles of odd lenght. (can be proved via contradiction)
+// idea: a graph is bipartite if and only if it has no cycles of odd lenght.
 // I wrote a a modified depth first search to check for any odd lenght loops.
 
 
