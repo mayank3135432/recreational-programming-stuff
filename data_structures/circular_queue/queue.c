@@ -31,13 +31,14 @@ int dequeue(){
 void display(){
   if(front==rear){
     printf("{}");
+    printf(" front=%d, rear=%d\n",front,rear);
     return;
   }
   printf("{");
   for(int i=front;i!=rear;i=(i+1)%MAX){
     printf("%d,",Q[i]);
   }
-  printf("\b}");
+  printf("\b} front=%d, rear=%d\n",front,rear);
 }
 
 

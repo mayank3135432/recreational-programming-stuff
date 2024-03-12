@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>functions</title>
+        <script types="text/javascript">
+            // Functions can be defined in head or body.
+            function myfunc(txt){// Better define function in head to ensure that it is loaded by thr browser before call
+                alert(txt); // Alert is a PreDefined Function.
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <input type="button" onclick="myfunc('hello')" value="FIRST">
+            <input type="button" onclick="myfunc('hai')" value="SECOND">
+        </form>
+        <br>
+        <form>
+            <input type="button" onclick="myfunc('GOOD MORNING')" value="In the morning">
+            <input type="button" onclick="myfunc('GOOD EVENING')" value="In the evening">
+        </form>
+        <p>By pressing the button a function will be called that will give an alert message.</p>
+    </body>
+</html>
