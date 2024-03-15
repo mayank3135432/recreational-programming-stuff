@@ -1,20 +1,33 @@
 #include<stdio.h>
 #include<stdlib.h>
-void inc(int*,int);
+#include <stdbool.h>
+int pov2(int n){
+    int N=1;
+    for(int i=0;i<n;i++){
+        N=2*N;
+    }
+    return(N);
+}
+bool* getbits(int n){
+    bool* bits=(bool*)malloc(n*sizeof(bool));
+    int k;
+    for(k=pov2(n)-1;k>=0;k--){
+        bits[k] = (n&(1<<k))>>k;
+    }
+    return bits;
+}
 int main(){
-    int i,count;
-    int A[4]={0};
-    for(count=0;count<16;count++){
-        //printf("%d)",count);
-        for(i=0;i<4;i++){
-            printf("%d",A[i]);
+    int k,n;
+    for(n=15;n>=0;n--){
+        for(k=3;k>=0;k--){
+            printf("%d",(n&(1<<k))>>k);
         }
         printf("\n");
-        inc(A,3);
     }
     return 0;
 }
-void inc(int* bin,int n){
+
+/* void inc(int* bin,int n){
     if(n==0){//edge case whenever MSB is 1;
         bin[n]=1;
         return;
@@ -24,4 +37,4 @@ void inc(int* bin,int n){
         bin[n]=0;
         inc(bin,n-1);
     }
-}
+} */

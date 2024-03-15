@@ -10,8 +10,6 @@ char* varnames;
 
 int main(){
 
-    menu();
-
     char x;
     int choice;
     fgets(infix,MAX,stdin);
@@ -20,10 +18,6 @@ int main(){
     int load = 0;
     int numvar=inttopos(infix, postfix, &load);
     char* varnames = setvarname(numvar);
-    for(int i=0;i<=load;i++){
-        printf("%c",postfix[i]);
-    }
-    printf("\n%d number of variables\n",numvar);
     
     // evaluate
     bool* arr=(bool*)calloc(numvar,sizeof(bool));

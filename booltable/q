@@ -1,0 +1,17 @@
+------------------------------------------------------Boolean Table------------------------------------------------------
+
+Input bool expression
+^ is AND 
+v is OR
+> is implication (conditional)
+~ is negation
+= is equivalence (biconditional)
+
+
+__________________ENTER A BOOL EXPRESSION IN 4 VARIABLES p,q,r,s__________________
+
+p
+1 number of variables
+0| || 0
+1| || 1
+p| || 
