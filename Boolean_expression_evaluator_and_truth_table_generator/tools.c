@@ -179,7 +179,6 @@ char* setvarname(int numberofvariables){
     return varnames;
 }
 
-
 bool evaluate(char* postfix, bool* values, char* varnames, int num){
     //int* evalstack=(int*)malloc(MAX*sizeof(int));
     bool evalstack[MAX];

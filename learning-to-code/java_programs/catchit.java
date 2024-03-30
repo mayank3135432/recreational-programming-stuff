@@ -7,5 +7,6 @@ class catchit{
         catch(Exception e){
             System.out.println(e);
         }
+        System.out.println("\n Program end... bye\n");
     }
 }
