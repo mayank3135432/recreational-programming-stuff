@@ -1,0 +1,41 @@
+#include<stdlib.h>
+#include<stdio.h>
+//#include"lists.h"
+struct list{
+  int** item;
+  int size_alloc;
+  int size;
+};
+typedef struct list list;
+
+void __init__(list* L){
+  L->item=(int**)malloc(sizeof(int*));
+  L->size_alloc=1;
+  L->size=0;
+}
+ list morespace(list L){
+  L.item=(int**)reallocarray(L.item,2*L.size_alloc,sizeof(int*));
+  L.size_alloc=2*L.size_alloc;
+  return L;
+}
+void append(list* L, int data){
+  if(L->size_alloc==L->size){
+    *L=morespace(*L);
+  }
+  L->size++;
+  L->item[L->size-1]=(int*)malloc(sizeof(int));
+  *(L->item[L->size-1])=data;
+}
+
+int* pop(list* L){
+  if(L->size==0) return NULL;
+  L->size--;
+  if(L->size<L->size_alloc/2) L->item=(int**)realloc(L->item,L->size_alloc*sizeof(int*)/2);
+  return(L->item[L->size]);
+}
+void print(list* L){
+  printf("[");
+  for(int i=0;i<L->size;i++){
+    printf("%d,",**(L->item + i));
+  }printf("]");
+}
