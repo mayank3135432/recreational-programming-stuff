@@ -1,6 +1,8 @@
 import numpy as np
 
 def matrix_chain(d):
+    if len(d) == 2:
+        return(0)
     num = len(d)-1 # number of matrices
     M = np.array([0]*num**2).reshape(num,num)
     i=0;inc=1
