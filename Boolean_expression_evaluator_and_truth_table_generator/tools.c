@@ -262,7 +262,7 @@ char maptoTF(int n){
     else if(n==1) return 'T';
     else return 'r';
 }
-int pov2(int n){z
+int pov2(int n){
     int N=1;
     for(int i=0;i<n;i++){
         N=2*N;
