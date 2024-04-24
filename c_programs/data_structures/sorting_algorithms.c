@@ -1,3 +1,5 @@
+/* Next step: make a random array of variable size*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
