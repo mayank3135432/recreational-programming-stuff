@@ -11,6 +11,18 @@ void display(double** M,int rows,int cols){
   }printf("\n");
 }
 double* solve(double** M,int rows,int cols){ // row reduces given matrix and return solution vector
+  if(M[0][0] == 0){ // edge case where the initial pivot (M[0][0]) is zero.
+    int target_row = 0;
+    for(int i=0;i<rows;i++){
+      if(M[i][0]!=0) target_row=i;
+    }
+    if(target_row==0) return NULL; // infiinitely many solutions
+    else{ // swap first row with a row whose first element is non zero.
+      double* temp=M[0];
+      M[0]=M[target_row];
+      M[target_row]=temp;
+    }
+  }
   int piv=0;
   double tempp,tempk,tempr;
   while(piv<rows){

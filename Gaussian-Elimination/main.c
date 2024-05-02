@@ -5,7 +5,7 @@
 int main(){
   double** matrix = (double**)malloc(3*sizeof(double*));
   for(int i=0;i<3;i++) matrix[i] = (double*)malloc(4*sizeof(double));
-  matrix[0][0]=1;matrix[0][1]=1;matrix[0][2]=-1;matrix[0][3]=-2;
+  matrix[0][0]=0;matrix[0][1]=1;matrix[0][2]=-1;matrix[0][3]=-2;
   matrix[1][0]=2;matrix[1][1]=-1;matrix[1][2]=1;matrix[1][3]=5;
   matrix[2][0]=-1;matrix[2][1]=2;matrix[2][2]=2;matrix[2][3]=1;
   display(matrix,3,4);
