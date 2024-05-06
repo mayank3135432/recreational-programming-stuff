@@ -1,7 +1,10 @@
-#include<stdio.h>
-void main(){
+int main(){
 
-	printf("Hello X\n");
+	int a,b,c;
+  a=1;
+  b=4;
+  c=a+b;
 
+  return 0;
 }
 

@@ -11,7 +11,7 @@ import sys
 import mysql.connector as con
 
 
-ui,_=loadUiType('savedb.ui')
+ui,_=loadUiType('/path/to/saveAIRPORT.ui')
 
 
 class MainApp(QWidget,ui):
@@ -53,7 +53,7 @@ class MainApp(QWidget,ui):
 
             print(e)
 
-        QMessageBox.information(self,"DB Insert","Error in save db")
+            QMessageBox.information(self,"DB Insert","Error in save db")
 
 def main():
 
