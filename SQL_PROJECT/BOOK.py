@@ -13,8 +13,6 @@ class MainApp(QWidget,ui):
         self.setupUi(self)
         self.b1.clicked.connect(self.savedb)
         self.fill_combobox();
-        self.cb1.currentIndexChanged.connect(self.fill_details_on_combobox_selected)
-        
 
     def fill_combobox(self):
         try:
@@ -36,44 +34,16 @@ class MainApp(QWidget,ui):
             mydb = con.connect(host="localhost",user="root", password="PujiMunnu!23",db="AIRPORT")
             cursor = mydb.cursor()
             em = self.cb1.currentText()
-            
-            cursor.execute("SELECT FLIGHTS.FLIGHT_CODE, AIRLINE.AL_NAME FROM FLIGHTS JOIN AIRLINE ON FLIGHTS.AIRLINE_ID = AIRLINE.AIRLINE_ID where FLIGHTS.FLIGHT_CODE= "+ em +";")
+            cursor.execute("select * from '"+ em +"'")
             result = cursor.fetchall()
             if result:
                 for X in result:
                     #self.tb1.setText(str(AIRPORT[0]))
-                    self.tb5.setText(str(X[1]))
-            cursor.execute("select SOURCE from FLIGHTS where FLIGHTS.FLIGHT_CODE = "+ em +";")
-            result = cursor.fetchall()
-            if result:
-                for X in result:
-                    #self.tb1.setText(str(AIRPORT[0]))
-                    self.tb6.setText(str(X[0]))
-            
-            cursor.execute("select DESTINATION from FLIGHTS where FLIGHTS.FLIGHT_CODE = "+ em +";")
-            result = cursor.fetchall()
-            if result:
-                for X in result:
-                    #self.tb1.setText(str(AIRPORT[0]))
-                    self.tb7.setText(str(X[0]))
-
-            cursor.execute("select DEPARTURE from FLIGHTS where FLIGHTS.FLIGHT_CODE = "+ em +";")
-            result = cursor.fetchall()
-            if result:
-                for X in result:
-                    #self.tb1.setText(str(AIRPORT[0]))
-                    self.tb8.setText(str(X[0]))
-            
-            cursor.execute("select ARRIVAL from FLIGHTS where FLIGHTS.FLIGHT_CODE = "+ em +";")
-            result = cursor.fetchall()
-            if result:
-                for X in result:
-                    #self.tb1.setText(str(AIRPORT[0]))
-                    self.tb9.setText(str(X[0]))
+                    self.cb2.setText(str(X[0]))
         except Exception as e:
             print(e)
-            print("Error in fill details on combo box selected ")
-    
+            print("Error in fill details ")
+
 
     def savedb(self):
         try:
