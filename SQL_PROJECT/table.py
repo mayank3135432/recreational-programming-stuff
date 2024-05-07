@@ -7,7 +7,7 @@ import sys
 import os
 import mysql.connector as con
 
-ui,_=loadUiType('/path/to/table.ui')
+ui,_=loadUiType('/home/ateium/SQL_PROJECT/table.ui')
 
 class MainApp(QWidget,ui):
     def __init__(self):
@@ -19,12 +19,14 @@ class MainApp(QWidget,ui):
         self.cb1.currentIndexChanged.connect(self.show_table)
         self.cb1.currentIndexChanged.connect(self.fillanothercombobox)
         self.b1.clicked.connect(self.deletedb)
-        self.b2.clicked.connect(lambda : os.system(f'python /path/to/save{self.cb1.currentText()}.py &'))
-        self.b4.clicked.connect(lambda : os.system(f'python /path/to/update{self.cb1.currentText()}.py &'))
+        self.b2.clicked.connect(lambda : os.system(f'python /home/ateium/SQL_PROJECT/save{self.cb1.currentText()}.py &'))
+        self.b4.clicked.connect(lambda : os.system(f'python /home/ateium/SQL_PROJECT/update{self.cb1.currentText()}.py &'))
         self.b3.clicked.connect(self.show_table)
+    
+    b4_is_visible = 1
 
     def select_table(self):
-        mydb = con.connect(host="localhost",user="root",password="your password",db="AIRPORT")
+        mydb = con.connect(host="localhost",user="root",password="PujiMunnu!23",db="AIRPORT")
         cursor = mydb.cursor()
         cursor.execute("show tables")
         result = cursor.fetchall()
@@ -35,7 +37,7 @@ class MainApp(QWidget,ui):
 
     def fillanothercombobox(self):
         try:
-            mydb = con.connect(host="localhost",user="root",password="your password",db="AIRPORT")
+            mydb = con.connect(host="localhost",user="root",password="PujiMunnu!23",db="AIRPORT")
             cursor = mydb.cursor()
             mystr = self.cb1.currentText()
             print(mystr)
@@ -48,10 +50,12 @@ class MainApp(QWidget,ui):
                 if mystr != 'CONTAINS':
                     self.cb3.clear()
                     self.cb3.hide()
+                    self.b4.show()
                     for tables in result:
                         self.cb2.addItem(str(tables[0]))
                 else:
                     self.cb3.show()
+                    self.b4.hide()
                     for tables in result:
                         self.cb2.addItem(str(tables[0]))
                         self.cb3.addItem(str(tables[1]))
@@ -60,33 +64,10 @@ class MainApp(QWidget,ui):
             print("Error in fill another combo box ")
 
 
-    def fill_details_on_combobox_selected(self):
-        try:
-            mydb = con.connect(host="localhost",user="root", password="your password",db="AIRPORT")
-            cursor = mydb.cursor()
-            em = self.cb1.currentText()
-            if(str(em) != 'CONTAINS'):
-                print(em)
-                cursor.execute("select * from "+ em +";")
-                result = cursor.fetchall()
-                if result:
-                    for EMPLOYEE in result:
-                        self.cb2.setItemText(0,str(EMPLOYEE[0]))
-            else:
-                print(em)
-                cursor.execute("select * from "+ em +";")
-                result = cursor.fetchall()
-                if result:
-                    for EMPLOYEE in result:
-                        self.cb2.setItemText(0,str(EMPLOYEE[0]))
-                        self.cb3.setItemText(0,str(EMPLOYEE[1]))                        
-        except Exception as e:
-            print(e)
-            print("Error in fill details on combo box select ")
-
+    
     def deletedb(self):
         try:
-            mydb = con.connect(host="localhost",user="root",password="your password",db="AIRPORT")
+            mydb = con.connect(host="localhost",user="root",password="PujiMunnu!23",db="AIRPORT")
             cursor = mydb.cursor()
             em = self.cb1.currentText()
             pk = self.cb2.currentText()
@@ -107,7 +88,7 @@ class MainApp(QWidget,ui):
 
     def show_table(self):
         try:
-            mydb = con.connect(host="localhost",user="root", password="your password",db="AIRPORT")
+            mydb = con.connect(host="localhost",user="root", password="PujiMunnu!23",db="AIRPORT")
             cursor = mydb.cursor()
             tablename = self.cb1.currentText()
             cursor.execute("select * from "+ tablename +" ")

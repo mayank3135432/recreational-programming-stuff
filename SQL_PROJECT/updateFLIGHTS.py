@@ -7,7 +7,7 @@ import sys
 
 import mysql.connector as con
 
-ui,_=loadUiType('/path/to/updateFLIGHTS.ui')
+ui,_=loadUiType('/home/ateium/SQL_PROJECT/updateFLIGHTS.ui')
 
 class MainApp(QWidget,ui):
     def __init__(self):
@@ -19,7 +19,7 @@ class MainApp(QWidget,ui):
         self.b1.clicked.connect(self.updatedb)
     def fill_combobox(self):
         try:
-            mydb = con.connect(host="localhost",user="root", password="your password",db="AIRPORT")
+            mydb = con.connect(host="localhost",user="root", password="PujiMunnu!23",db="AIRPORT")
             cursor = mydb.cursor()
             cursor.execute("select * from FLIGHTS")
             result = cursor.fetchall()
@@ -60,16 +60,16 @@ class MainApp(QWidget,ui):
             print("Error in fill combo box ")
     def fill_details_on_combobox_selected(self):
         try:
-            mydb = con.connect(host="localhost",user="root", password="your password",db="AIRPORT")
+            mydb = con.connect(host="localhost",user="root", password="PujiMunnu!23",db="AIRPORT")
             cursor = mydb.cursor()
             em = self.cb0.currentText()
             cursor.execute("select * from FLIGHTS where FLIGHT_CODE='"+ em +"'")
             result = cursor.fetchall();
             if result:
                 for FLIGHTS in result:
-                    self.cb1.setItemText(0,str(FLIGHTS[1]))
-                    self.cb2.setItemText(0,str(FLIGHTS[2]))
-                    self.cb3.setItemText(0,str(FLIGHTS[3]))
+                    #self.cb1.setItemText(0,str(FLIGHTS[1]))
+                    #self.cb2.setItemText(0,str(FLIGHTS[2]))
+                    #self.cb3.setItemText(0,str(FLIGHTS[3]))
                     self.tb1.setText(str(FLIGHTS[4]))
                     self.tb2.setText(str(FLIGHTS[5]))
                     self.tb3.setText(str(FLIGHTS[6]))
@@ -79,7 +79,7 @@ class MainApp(QWidget,ui):
     
     def updatedb(self):
         try:
-            mydb = con.connect(host="localhost",user="root", password="your password",db="AIRPORT")
+            mydb = con.connect(host="localhost",user="root", password="PujiMunnu!23",db="AIRPORT")
             cursor = mydb.cursor()
             FLIGHT_CODE = self.cb0.currentText()
             AIRLINE_ID = self.cb1.currentText()

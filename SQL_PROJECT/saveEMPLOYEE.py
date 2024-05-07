@@ -5,7 +5,7 @@ from PyQt5.uic import loadUiType
 import sys
 
 import mysql.connector as con
-ui,_=loadUiType('/path/to/saveEMPLOYEE.ui')
+ui,_=loadUiType('/home/ateium/SQL_PROJECT/saveEMPLOYEE.ui')
 
 class MainApp(QWidget,ui):
     def __init__(self):
@@ -16,7 +16,7 @@ class MainApp(QWidget,ui):
 
     def fill_combobox(self):
         try:
-            mydb = con.connect(host="localhost",user="root", password="your password",db="AIRPORT")
+            mydb = con.connect(host="localhost",user="root", password="PujiMunnu!23",db="AIRPORT")
             cursor = mydb.cursor()
             cursor.execute("select * from AIRPORT")
             result = cursor.fetchall();
@@ -31,7 +31,7 @@ class MainApp(QWidget,ui):
 
     def savedb(self):
         try:
-            mydb = con.connect(host="localhost",user="root", password="your password",db="AIRPORT")
+            mydb = con.connect(host="localhost",user="root", password="PujiMunnu!23",db="AIRPORT")
             cursor = mydb.cursor()
             EMP_ID = self.tb1.text()
             ENAME = self.tb2.text()

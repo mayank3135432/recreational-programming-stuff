@@ -10,7 +10,7 @@ import sys
 
 import mysql.connector as con
 
-ui,_=loadUiType('/path/to/saveAIRLINE.ui')
+ui,_=loadUiType('/home/ateium/SQL_PROJECT/saveAIRLINE.ui')
 
 
 class MainApp(QWidget,ui):
@@ -22,7 +22,7 @@ class MainApp(QWidget,ui):
 
     def savedb(self):
         try:
-            mydb = con.connect(host="localhost",user="root", password="your password",db="AIRPORT")
+            mydb = con.connect(host="localhost",user="root", password="PujiMunnu!23",db="AIRPORT")
             cursor = mydb.cursor()
             NAME = self.tb1.text()
             cursor.execute("insert into AIRLINE(AL_NAME) values('"+ NAME +"')");

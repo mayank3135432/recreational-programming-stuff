@@ -10,7 +10,7 @@ import sys
 
 import mysql.connector as con
 
-ui,_=loadUiType('/path/to/saveCONTAINS.ui')
+ui,_=loadUiType('/home/ateium/SQL_PROJECT/saveCONTAINS.ui')
 
 
 class MainApp(QWidget,ui):
@@ -23,7 +23,7 @@ class MainApp(QWidget,ui):
 
     def fill_combobox(self):
         try:
-            mydb = con.connect(host="localhost",user="root", password="your password",db="AIRPORT")
+            mydb = con.connect(host="localhost",user="root", password="PujiMunnu!23",db="AIRPORT")
             cursor = mydb.cursor()
             cursor.execute("select * from AIRLINE")
             result = cursor.fetchall();
@@ -46,7 +46,7 @@ class MainApp(QWidget,ui):
 
     def savedb(self):
         try:
-            mydb = con.connect(host="localhost",user="root", password="your password",db="AIRPORT")
+            mydb = con.connect(host="localhost",user="root", password="PujiMunnu!23",db="AIRPORT")
             cursor = mydb.cursor()
             AIRLINE_ID = self.cb1.currentText()
             AP_NAME = self.cb2.currentText()

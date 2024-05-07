@@ -11,7 +11,7 @@ import sys
 import mysql.connector as con
 
 
-ui,_=loadUiType('/path/to/saveAIRPORT.ui')
+ui,_=loadUiType('/home/ateium/SQL_PROJECT/saveAIRPORT.ui')
 
 
 class MainApp(QWidget,ui):
@@ -29,7 +29,7 @@ class MainApp(QWidget,ui):
 
         try:
 
-            mydb = con.connect(host="localhost",user="root", password="your password",db="AIRPORT")
+            mydb = con.connect(host="localhost",user="root", password="PujiMunnu!23",db="AIRPORT")
 
             cursor = mydb.cursor()
 
