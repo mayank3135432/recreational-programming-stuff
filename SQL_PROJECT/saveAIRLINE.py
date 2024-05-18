@@ -22,7 +22,7 @@ class MainApp(QWidget,ui):
 
     def savedb(self):
         try:
-            mydb = con.connect(host="localhost",user="root", password="PujiMunnu!23",db="AIRPORT")
+            mydb = con.connect(host="localhost",user="root", password="admin",db="AIRPORT")
             cursor = mydb.cursor()
             NAME = self.tb1.text()
             cursor.execute("insert into AIRLINE(AL_NAME) values('"+ NAME +"')");

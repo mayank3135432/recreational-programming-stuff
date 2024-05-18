@@ -19,7 +19,7 @@ class MainApp(QWidget,ui):
 
     def login(self):
         try:
-            mydb = con.connect(host="localhost",user="root", password="PujiMunnu!23",db="AIRPORT")
+            mydb = con.connect(host="localhost",user="root", password="admin",db="AIRPORT")
             cursor = mydb.cursor()
             cursor.execute("select PNAME from PASSENGER")
             result = cursor.fetchall()
@@ -33,7 +33,7 @@ class MainApp(QWidget,ui):
             print('ERROR IN MAINAPP')
     def show_table(self):
         try:
-            mydb = con.connect(host="localhost",user="root", password="PujiMunnu!23",db="AIRPORT")
+            mydb = con.connect(host="localhost",user="root", password="admin",db="AIRPORT")
             cursor = mydb.cursor()
             cursor.execute("select * from PASSENGER where PNAME = '"+ self.tb1.text() +"' ")
             colnames = cursor.column_names

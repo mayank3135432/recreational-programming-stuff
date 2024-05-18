@@ -23,7 +23,7 @@ class MainApp(QWidget,ui):
 
     def fill_combobox(self):
         try:
-            mydb = con.connect(host="localhost",user="root", password="PujiMunnu!23",db="AIRPORT")
+            mydb = con.connect(host="localhost",user="root", password="admin",db="AIRPORT")
             cursor = mydb.cursor()
             cursor.execute("select * from AIRLINE")
             result = cursor.fetchall();
@@ -46,7 +46,7 @@ class MainApp(QWidget,ui):
 
     def savedb(self):
         try:
-            mydb = con.connect(host="localhost",user="root", password="PujiMunnu!23",db="AIRPORT")
+            mydb = con.connect(host="localhost",user="root", password="admin",db="AIRPORT")
             cursor = mydb.cursor()
             AIRLINE_ID = self.cb1.currentText()
             AP_NAME = self.cb2.currentText()

@@ -19,7 +19,7 @@ class MainApp(QWidget,ui):
         self.b1.clicked.connect(self.updatedb)
     def fill_combobox(self):
         try:
-            mydb = con.connect(host="localhost",user="root", password="PujiMunnu!23",db="AIRPORT")
+            mydb = con.connect(host="localhost",user="root", password="admin",db="AIRPORT")
             cursor = mydb.cursor()
             cursor.execute("select * from EMPLOYEE")
             result = cursor.fetchall()
@@ -41,7 +41,7 @@ class MainApp(QWidget,ui):
             print("Error in fill combo box ")
     def fill_details_on_combobox_selected(self):
         try:
-            mydb = con.connect(host="localhost",user="root", password="PujiMunnu!23",db="AIRPORT")
+            mydb = con.connect(host="localhost",user="root", password="admin",db="AIRPORT")
             cursor = mydb.cursor()
             em = self.cb1.currentText()
             cursor.execute("select * from EMPLOYEE where EMP_ID='"+ em +"'")
@@ -61,7 +61,7 @@ class MainApp(QWidget,ui):
     
     def updatedb(self):
         try:
-            mydb = con.connect(host="localhost",user="root", password="PujiMunnu!23",db="AIRPORT")
+            mydb = con.connect(host="localhost",user="root", password="admin",db="AIRPORT")
             cursor = mydb.cursor()
             em = self.cb1.currentText()
             name = self.tb2.text()

@@ -26,7 +26,7 @@ class MainApp(QWidget,ui):
     b4_is_visible = 1
 
     def select_table(self):
-        mydb = con.connect(host="localhost",user="root",password="PujiMunnu!23",db="AIRPORT")
+        mydb = con.connect(host="localhost",user="root",password="admin",db="AIRPORT")
         cursor = mydb.cursor()
         cursor.execute("show tables")
         result = cursor.fetchall()
@@ -37,7 +37,7 @@ class MainApp(QWidget,ui):
 
     def fillanothercombobox(self):
         try:
-            mydb = con.connect(host="localhost",user="root",password="PujiMunnu!23",db="AIRPORT")
+            mydb = con.connect(host="localhost",user="root",password="admin",db="AIRPORT")
             cursor = mydb.cursor()
             mystr = self.cb1.currentText()
             print(mystr)
@@ -67,7 +67,7 @@ class MainApp(QWidget,ui):
     
     def deletedb(self):
         try:
-            mydb = con.connect(host="localhost",user="root",password="PujiMunnu!23",db="AIRPORT")
+            mydb = con.connect(host="localhost",user="root",password="admin",db="AIRPORT")
             cursor = mydb.cursor()
             em = self.cb1.currentText()
             pk = self.cb2.currentText()
@@ -88,7 +88,7 @@ class MainApp(QWidget,ui):
 
     def show_table(self):
         try:
-            mydb = con.connect(host="localhost",user="root", password="PujiMunnu!23",db="AIRPORT")
+            mydb = con.connect(host="localhost",user="root", password="admin",db="AIRPORT")
             cursor = mydb.cursor()
             tablename = self.cb1.currentText()
             cursor.execute("select * from "+ tablename +" ")
