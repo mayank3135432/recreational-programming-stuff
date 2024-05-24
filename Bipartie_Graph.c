@@ -2,7 +2,7 @@
 This was my submission for LeettCode problem on bipartite graphs
 https://leetcode.com/problems/is-graph-bipartite/
 */
-#include<stdboool.h>
+#include<stdbool.h>
 
 // idea: a graph is bipartite if and only if it has no cycles of odd lenght.
 // I wrote a a modified depth first search to check for any odd lenght loops.
